@@ -1,0 +1,19 @@
+0 * 5 Axis Type 0-TABLE_TABLE,1-HEAD_HEAD,2-HEAD_TABLE, 3-TABLE_TABLE_TOOLCOMP, 4-HEAD_HEAD_NOTOOLCOMP, 5-HEAD_TABLE_NOTOOLCOMP
+1 * XYZ Coordinate Type 0-Part , 1-Machine
+0.000000 * Spindle Direction X
+0.000000 * Spindle Direction Y
+1.000000 * Spindle Direction Z
+1.000000 * 1st Rotary Axis Direction X
+0.000000 * 1st Rotary Axis Direction Y
+0.000000 * 1st Rotary Axis Direction Z
+0.000000 * 2nd Rotary Axis Direction X
+1.000000 * 2nd Rotary Axis Direction Y
+0.000000 * 2nd Rotary Axis Direction Z
+0.000000 * Rotation Axis Base Point X  (Millimeters Only)
+0.000000 * Rotation Axis Base Point Y  (Millimeters Only)
+0.000000 * Rotation Axis Base Point Z  (Millimeters Only)
+-100000.000000 * 1st Rotation Axis Limit Min
+100000.000000 * 1st Rotation Axis Limit Max
+-100000.000000 * 2nd Rotation Axis Limit Min
+100000.000000 * 2nd Rotation Axis Limit Max
+TableTable * Default Machine Simulation
