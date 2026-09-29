@@ -988,7 +988,6 @@ DIUS=9999
 :C: GC(G_WORK_26)      =129  GG(G_WORK_26)      = 12  GM(G_WORK_26)      = YES
 :C: GC(G_VARIABLE_PECK)= 83  GG(G_VARIABLE_PECK)=  9  GM(G_VARIABLE_PECK)= YES
 :C: GC(G_HIGH_PECK)    = 73  GG(G_HIGH_PECK)    =  9  GM(G_HIGH_PECK)    = YES
-:C: GC(G_REVERSE_TAP)  = 74  GG(G_REVERSE_TAP)  =  9  GM(G_REVERSE_TAP)  = YES
 :C: GC(G_FINE_BORE)    = 76  GG(G_FINE_BORE)    =  9  GM(G_FINE_BORE)    = YES
 :C: GC(G_CANCEL_CYC)   = 80  GG(G_CANCEL_CYC)   =  9  GM(G_CANCEL_CYC)   = YES
 :C: GC(G_DRILL)        = 81  GG(G_DRILL)        =  9  GM(G_DRILL)        = YES
@@ -997,7 +996,6 @@ DIUS=9999
 :C: GC(G_TAP)          = 84  GG(G_TAP)          =  9  GM(G_TAP)          = YES
 :C: GC(G_REAM)         = 85  GG(G_REAM)         =  9  GM(G_REAM)         = YES
 :C: GC(G_BORE)         = 86  GG(G_BORE)         =  9  GM(G_BORE)         = YES
-:C: GC(G_BACK_BORE)    = 87  GG(G_BACK_BORE)    =  9  GM(G_BACK_BORE)    = YES
 :C: GC(G_BORE_DWELL)   = 88  GG(G_BORE_DWELL)   =  9  GM(G_BORE_DWELL)   = YES
 :C: GC(G_REAM_DWELL)   = 89  GG(G_REAM_DWELL)   =  9  GM(G_REAM_DWELL)   = YES
 :C: GC(G_ABS)          = 90  GG(G_ABS)          =  3  GM(G_ABS)          = YES
