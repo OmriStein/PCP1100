@@ -427,7 +427,7 @@
 *
 :SECTION=START_OF_TAPE_TAIL
 :T:<BLANK><EOL>
-:T:<G:17><G!:40><G:49> G50<G:54><G:64><G!:80><G:90> G91.1<G!:94><EOL>
+:T:<G:17><G!:40><G:49> G50 G<%:work_coord><G:64><G!:80><G:90> G91.1<G!:94><EOL>
 :T:<G:21><EOL>
 :T:<G:30><EOL>
 :T:<BLANK><EOL>
@@ -524,7 +524,7 @@
 *
 :SECTION=RAPID_MOVE_MILL
 :T:<N><S><M:SPINDLE_DIR><EOL>
-:T:<N><G:ABSINC><W_COORD><G:00><X><Y><EOL>
+:T:<N><G:ABSINC><G:00><X><Y><EOL>
 *
 :SECTION=RAPID_LEADIN_MOVE_MILL
 :T:<N><S><M:SPINDLE_DIR><EOL>
@@ -619,9 +619,6 @@
 *
 *:SECTION=RIGID_REVERSE_TAPPING_CYCLE
 *
-:SECTION=FINE_BORING_CYCLE
-:T:<N><G:ABSINC><G:76><G:PLANE><X><Y><Z_CLEAR><Z_DEPTH> Q<#:POST_SHIFT><F!><M:COOLANT_TYPE><EOL>
-*
 *:SECTION=GUN_DRILLING
 *
 *:SECTION=PAT_DRILLING_CYCLE
@@ -669,7 +666,7 @@
 :SECTION=CONTINUE_DRILL_CYCLE
 :T:IF USING_4TH_AXIS_LOCK=YES AND ABS(INC_ROT_TILT_A)>.00005 THEN <N><M:MC(M_LOCK_OFF)><EOL>ENDIF
 :T:IF USING_5TH_AXIS_LOCK=YES AND ABS(INC_ROT_TILT_B)>.00005 THEN <N><M:MC(M_LOCK_5OFF)><EOL>ENDIF
-:T:<N><G:ABSINC><W_COORD><X><Y><A><B><EOL>
+:T:<N><G:ABSINC><X><Y><A><B><EOL>
 :T:IF USING_4TH_AXIS_LOCK=YES THEN <N><M:MC(M_LOCK_ON)><EOL>ENDIF
 :T:IF USING_5TH_AXIS_LOCK=YES THEN <N><M:MC(M_LOCK_5ON)><EOL>ENDIF
 *
@@ -929,10 +926,8 @@ DIUS=9999
 :C: G_GROUP(GG(G_COMP_OFF))=GC(G_COMP_OFF)
 :C: G_GROUP(GG(G_WORK_1))=0
 :C: M_GROUP(MG(M_LOCK_OFF))=MC(M_LOCK_OFF)
-:C: M_GROUP(MG(M_LOCK_5OFF))=MC(M_LOCK_5OFF)
 :C: G_GROUP(GG(G_FPM))=GC(G_FPM)
 :C: A_LOCK=MC(M_LOCK_ON)
-:C: B_LOCK=MC(M_LOCK_5ON)
 *
 :SECTION=CALC_RESET_FIVE_AXIS_REGISTERS
 *
@@ -966,29 +961,8 @@ DIUS=9999
 :C: GC(G_WORK_4)       = 57  GG(G_WORK_4)       = 12  GM(G_WORK_4)       = YES
 :C: GC(G_WORK_5)       = 58  GG(G_WORK_5)       = 12  GM(G_WORK_5)       = YES
 :C: GC(G_WORK_6)       = 59  GG(G_WORK_6)       = 12  GM(G_WORK_6)       = YES
-:C: GC(G_WORK_7)       =110  GG(G_WORK_7)       = 12  GM(G_WORK_7)       = YES
-:C: GC(G_WORK_8)       =111  GG(G_WORK_8)       = 12  GM(G_WORK_8)       = YES
-:C: GC(G_WORK_9)       =112  GG(G_WORK_9)       = 12  GM(G_WORK_9)       = YES
-:C: GC(G_WORK_10)      =113  GG(G_WORK_10)      = 12  GM(G_WORK_10)      = YES
-:C: GC(G_WORK_11)      =114  GG(G_WORK_11)      = 12  GM(G_WORK_11)      = YES
-:C: GC(G_WORK_12)      =115  GG(G_WORK_12)      = 12  GM(G_WORK_12)      = YES
-:C: GC(G_WORK_13)      =116  GG(G_WORK_13)      = 12  GM(G_WORK_13)      = YES
-:C: GC(G_WORK_14)      =117  GG(G_WORK_14)      = 12  GM(G_WORK_14)      = YES
-:C: GC(G_WORK_15)      =118  GG(G_WORK_15)      = 12  GM(G_WORK_15)      = YES
-:C: GC(G_WORK_16)      =119  GG(G_WORK_16)      = 12  GM(G_WORK_16)      = YES
-:C: GC(G_WORK_17)      =120  GG(G_WORK_17)      = 12  GM(G_WORK_17)      = YES
-:C: GC(G_WORK_18)      =121  GG(G_WORK_18)      = 12  GM(G_WORK_18)      = YES
-:C: GC(G_WORK_19)      =122  GG(G_WORK_19)      = 12  GM(G_WORK_19)      = YES
-:C: GC(G_WORK_20)      =123  GG(G_WORK_20)      = 12  GM(G_WORK_20)      = YES
-:C: GC(G_WORK_21)      =124  GG(G_WORK_21)      = 12  GM(G_WORK_21)      = YES
-:C: GC(G_WORK_22)      =125  GG(G_WORK_22)      = 12  GM(G_WORK_22)      = YES
-:C: GC(G_WORK_23)      =126  GG(G_WORK_23)      = 12  GM(G_WORK_23)      = YES
-:C: GC(G_WORK_24)      =127  GG(G_WORK_24)      = 12  GM(G_WORK_24)      = YES
-:C: GC(G_WORK_25)      =128  GG(G_WORK_25)      = 12  GM(G_WORK_25)      = YES
-:C: GC(G_WORK_26)      =129  GG(G_WORK_26)      = 12  GM(G_WORK_26)      = YES
 :C: GC(G_VARIABLE_PECK)= 83  GG(G_VARIABLE_PECK)=  9  GM(G_VARIABLE_PECK)= YES
 :C: GC(G_HIGH_PECK)    = 73  GG(G_HIGH_PECK)    =  9  GM(G_HIGH_PECK)    = YES
-:C: GC(G_FINE_BORE)    = 76  GG(G_FINE_BORE)    =  9  GM(G_FINE_BORE)    = YES
 :C: GC(G_CANCEL_CYC)   = 80  GG(G_CANCEL_CYC)   =  9  GM(G_CANCEL_CYC)   = YES
 :C: GC(G_DRILL)        = 81  GG(G_DRILL)        =  9  GM(G_DRILL)        = YES
 :C: GC(G_SPOT_DRILL)   = 82  GG(G_SPOT_DRILL)   =  9  GM(G_SPOT_DRILL)   = YES
@@ -1023,18 +997,14 @@ DIUS=9999
 :C: MC(M_COOL_MIST)    =  7  MG(M_COOL_MIST)    =  2  MM(M_COOL_MIST)    = YES
 :C: MC(M_COOL_FLOOD)   =  8  MG(M_COOL_FLOOD)   =  2  MM(M_COOL_FLOOD)   = YES
 :C: MC(M_COOL_OFF)     =  9  MG(M_COOL_OFF)     =  2  MM(M_COOL_OFF)     = YES
-:C: MC(M_COOL_THRU)    = 51  MG(M_COOL_THRU)    =  2  MM(M_COOL_THRU)    = YES
-:C: MC(M_CW_FLOOD)     = 13  MG(M_CW_FLOOD)     =  1  MM(M_CW_FLOOD)     = YES
-:C: MC(M_CCW_FLOOD)    = 14  MG(M_CCW_FLOOD)    =  1  MM(M_CCW_FLOOD)    = YES
+* M51 removed (PathPilot: spindle override). Through-coolant (coolant=4) now prints M8 instead of M0.
+:C: MC(M_COOL_THRU)    =  8  MG(M_COOL_THRU)    =  2  MM(M_COOL_THRU)    = YES
 :C: MC(M_ORIENT)       = 19  MG(M_ORIENT)       =  0  MM(M_ORIENT)       = NO
 :C: MC(M_END_PROG)     = 30  MG(M_END_PROG)     =  0  MM(M_END_PROG)     = NO
-:C: MC(M_COOL_THRU)    = 50  MG(M_COOL_THRU)    =  1  MM(M_COOL_THRU)    = YES
 :C: MC(M_SUB_CALL)     = 98  MG(M_SUB_CALL)     =  0  MM(M_SUB_CALL)     = NO
 :C: MC(M_SUB_END)      = 99  MG(M_SUB_END)      =  0  MM(M_SUB_END)      = NO
 :C: MC(M_LOCK_ON)      = 10  MG(M_LOCK_ON)      =  3  MM(M_LOCK_ON)      = YES
 :C: MC(M_LOCK_OFF)     = 11  MG(M_LOCK_OFF)     =  3  MM(M_LOCK_OFF)     = YES
-:C: MC(M_LOCK_5ON)     = 20  MG(M_LOCK_5ON)     =  4  MM(M_LOCK_5ON)     = YES
-:C: MC(M_LOCK_5OFF)    = 21  MG(M_LOCK_5OFF)    =  4  MM(M_LOCK_5OFF)    = YES
 *
 * OVERRIDE TEST: copy of MILL.LIB CALC_POST_PROGRAM_STOP + POST_OP_COUNT line.
 * If Contour Mill5 posts as N80, .SRC sections override MILL.LIB. If N90, the library wins.
