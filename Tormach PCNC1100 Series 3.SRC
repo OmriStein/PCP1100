@@ -431,6 +431,7 @@
 :T:(Date Posted  <%:MONTH>/<%:DAY>/<%:YEAR>  <POST_TIME> )<EOL>
 :T:<BLANK><EOL>
 :T:<STOCK_MATERIAL><EOL>
+:T:<S_THICKNESS><EOL>
 :T:<BLANK><EOL>
 :T:(TOOL LIST)<EOL>
 *
