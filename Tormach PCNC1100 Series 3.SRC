@@ -41,6 +41,19 @@
 :ALLOW_PROBING=FALSE
 :MILL_OD_CYLINDRICAL=FALSE
 *-----------------------------------
+* Optional ETS tool-length probe (G37) after each M6. Machine Posting tab, No/Yes, default No.
+:ATTRNAME=measure tool length
+:ATTRTYPE=SELECT
+:ATTRID=18052
+:ATTREMARK=G37 ETS
+:ATTRSEL=N
+:ATTRTITLE=Measure Tool Length
+:ATTRSELSTR=No
+:ATTRSELSTR=Yes
+:ATTRDEFAULT=1
+:ATTRUSED=1
+:ATTREND
+*-----------------------------------
 :ATTRNAME=MACHINE NAME
 :ATTRTYPE=DESCRIPTOR
 :ATTRVTYPE=CHARACTER
@@ -231,6 +244,8 @@
 :ATTRLISTDEF=1
 :ATTRLIST=date
 :ATTRLISTDEF=
+:ATTRLIST=measure tool length
+:ATTRLISTDEF=1
 :ATTRUSED=1
 :ATTRDEFAULT=1
 :ATTREND
@@ -461,6 +476,7 @@
 :T:N<%:((OPER_COUNT-POST_OP_COUNT)*10)><TLP_OPER_NAME><EOL>
 :T:<TOOL_COMMENT><EOL>
 :T:<M:06><T><G:43> H<"%2LNT":TOOL><EOL>
+:T:IF measure_tool_length=2 THEN <G:37><EOL>ENDIF
 *
 *:SECTION=INIT_PRELOAD_TOOL_CHANGE_MILL
 *
@@ -472,6 +488,7 @@
 :T:<M:01><EOL>
 :T:<TOOL_COMMENT><EOL>
 :T:<M:06><T><G:43> H<"%2LNT":TOOL><EOL>
+:T:IF measure_tool_length=2 THEN <G:37><EOL>ENDIF
 *
 * Operation header for same-tool continuations (called from CALC_START_OPERATION)
 :SECTION=OPR_NAME
@@ -950,6 +967,7 @@ DIUS=9999
 :C: GC(G_ENGLISH)      = 20  GG(G_ENGLISH)      =  2  GM(G_ENGLISH)      = YES
 :C: GC(G_METRIC)       = 21  GG(G_METRIC)       =  2  GM(G_METRIC)       = YES
 :C: GC(G_HOME)         = 28  GG(G_HOME)         =  0  GM(G_HOME)         = NO
+:C: GC(G_ETS)          = 37  GG(G_ETS)          =  0  GM(G_ETS)          = NO
 :C: GC(G_COMP_OFF)     = 40  GG(G_COMP_OFF)     =  7  GM(G_COMP_OFF)     = YES
 :C: GC(G_COMP_LEFT)    = 41  GG(G_COMP_LEFT)    =  7  GM(G_COMP_LEFT)    = YES
 :C: GC(G_COMP_RIGHT)   = 42  GG(G_COMP_RIGHT)   =  7  GM(G_COMP_RIGHT)   = YES
