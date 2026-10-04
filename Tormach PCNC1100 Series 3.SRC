@@ -246,14 +246,14 @@
 *-----------------------------------
 :OPERID=MILL_DRILLING
 :OPERSUB=DRILLING
-:OPERLIST=abs inc
+*:OPERLIST=abs inc
 :OPERLIST=work coord
 :OPERLIST=coolant
 :OPEREND
 *-----------------------------------
 :OPERID=MILL_DRILLING
 :OPERSUB=SPOT_DRILLING
-:OPERLIST=abs inc
+*:OPERLIST=abs inc
 :OPERLIST=work coord
 :OPERLIST=coolant
 :OPERLIST=dwell
@@ -261,53 +261,49 @@
 *-----------------------------------
 :OPERID=MILL_DRILLING
 :OPERSUB=PECKING
-:OPERLIST=abs inc
+*:OPERLIST=abs inc
 :OPERLIST=work coord
 :OPERLIST=coolant
 :OPEREND
 *-----------------------------------
 :OPERID=MILL_DRILLING
 :OPERSUB=TAPPING
-:OPERLIST=abs inc
+*:OPERLIST=abs inc
 :OPERLIST=work coord
 :OPERLIST=coolant
 :OPEREND
 *-----------------------------------
 :OPERID=MILL_DRILLING
 :OPERSUB=BORING
-:OPERLIST=abs inc
+*:OPERLIST=abs inc
 :OPERLIST=work coord
 :OPERLIST=coolant
 :OPEREND
 *-----------------------------------
 :OPERID=MILL_DRILLING
 :OPERSUB=HIGH_SPEED_PECKING
-:OPERLIST=abs inc
+*:OPERLIST=abs inc
 :OPERLIST=work coord
 :OPERLIST=coolant
 :OPEREND
 *-----------------------------------
 :OPERID=MILL_DRILLING
 :OPERSUB=VARIABLE_PECKING
-:OPERLIST=abs inc
+*:OPERLIST=abs inc
 :OPERLIST=work coord
 :OPERLIST=coolant
 :OPEREND
 *-----------------------------------
 :OPERID=MILL_DRILLING
-:OPERSUB=REVERSE_TAPPING
-:OPEREND
-*-----------------------------------
-:OPERID=MILL_DRILLING
 :OPERSUB=REAMING
-:OPERLIST=abs inc
+*:OPERLIST=abs inc
 :OPERLIST=work coord
 :OPERLIST=coolant
 :OPEREND
 *-----------------------------------
 :OPERID=MILL_DRILLING
 :OPERSUB=REAMING_DWELL
-:OPERLIST=abs inc
+*:OPERLIST=abs inc
 :OPERLIST=work coord
 :OPERLIST=coolant
 :OPERLIST=dwell
@@ -315,7 +311,7 @@
 *-----------------------------------
 :OPERID=MILL_DRILLING
 :OPERSUB=BORE_DWELL
-:OPERLIST=abs inc
+*:OPERLIST=abs inc
 :OPERLIST=work coord
 :OPERLIST=coolant
 :OPERLIST=dwell
@@ -623,22 +619,22 @@
 :T:<N><G:ABSINC><G:85><G:PLANE><X><Y><Z_CLEAR><Z_DEPTH><F!><M:COOLANT_TYPE><EOL>
 *
 :SECTION=BORING_CYCLE
-:T:<N><G:ABSINC><G:86><G:PLANE><X><Y><Z_CLEAR><Z_DEPTH><F!><M:COOLANT_TYPE><EOL>
+:T:<N><G:ABSINC><G:85><G:PLANE><X><Y><Z_CLEAR><Z_DEPTH><F!><M:COOLANT_TYPE><EOL>
 *
 :SECTION=BACK_BORING_CYCLE
-:T:<N><G:ABSINC><G:87><G:PLANE><X><Y><Z_CLEAR><Z_DEPTH> Q<#:POST_SHIFT><F!><M:COOLANT_TYPE><EOL>
+:T:<N><M:00> (Error! - BackBoring cycle not supported)<EOL>
 *
 :SECTION=BORE_DWELL_CYCLE
-:T:<N><G:ABSINC><G:88><G:PLANE><X><Y><Z_CLEAR><Z_DEPTH> P<"#-3.3N":POST_DWELL><F!><M:COOLANT_TYPE><EOL>
+:T:<N><G:ABSINC><G:89><G:PLANE><X><Y><Z_CLEAR><Z_DEPTH> P<"#-3.3N":POST_DWELL><F!><M:COOLANT_TYPE><EOL>
 *
 :SECTION=REAM_DWELL_CYCLE
 :T:<N><G:ABSINC><G:89><G:PLANE><X><Y><Z_CLEAR><Z_DEPTH> P<"#-3.3N":POST_DWELL><F!><M:COOLANT_TYPE><EOL>
 *
+:SECTION=FINE_BORING_CYCLE
+:T:<N><G:ABSINC><G:85><G:PLANE><X><Y><Z_CLEAR><Z_DEPTH><F!><M:COOLANT_TYPE><EOL>
+*
 :SECTION=HIGH_SPEED_PECK_CYCLE
 :T:<N><G:ABSINC><G:73><G:PLANE><X><Y><Z_CLEAR><Z_DEPTH><SUB_PECK><F!><M:COOLANT_TYPE><EOL>
-*
-:SECTION=REVERSE_TAPPING_CYCLE
-:T:<N><G:ABSINC><G:74><G:PLANE><X><Y><Z_CLEAR><Z_DEPTH><F!><M:COOLANT_TYPE><EOL>
 *
 *:SECTION=RIGID_REVERSE_TAPPING_CYCLE
 *
