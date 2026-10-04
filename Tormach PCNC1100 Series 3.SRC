@@ -405,7 +405,13 @@
 *
 :SECTION=START_OF_TAPE_TAIL
 :T:<BLANK><EOL>
-:T:<G:17><G!:40><G:49> G50 G<%:work_coord><G:64><G!:80><G:90> G91.1<G!:94><EOL>
+:T:IF work_coord>53 AND work_coord<59 THEN <G:17><G!:40><G:49> G50 G<%:work_coord><G:64><G!:80><G:90> G91.1<G!:94><EOL>ENDIF
+:T:IF work_coord<54 THEN <G:17><G!:40><G:49> G50 G54<G:64><G!:80><G:90> G91.1<G!:94><EOL>ENDIF
+:T:IF work_coord>59 THEN <G:17><G!:40><G:49> G50 G54<G:64><G!:80><G:90> G91.1<G!:94><EOL>ENDIF
+:T:IF work_coord=59 AND sub_work_coord=1 THEN <G:17><G!:40><G:49> G50 G59.1<G:64><G!:80><G:90> G91.1<G!:94><EOL>ENDIF
+:T:IF work_coord=59 AND sub_work_coord=2 THEN <G:17><G!:40><G:49> G50 G59.2<G:64><G!:80><G:90> G91.1<G!:94><EOL>ENDIF
+:T:IF work_coord=59 AND sub_work_coord=3 THEN <G:17><G!:40><G:49> G50 G59.3<G:64><G!:80><G:90> G91.1<G!:94><EOL>ENDIF
+:T:IF work_coord=59 AND sub_work_coord>3 THEN <G:17><G!:40><G:49> G50 G59<G:64><G!:80><G:90> G91.1<G!:94><EOL>ENDIF
 :T:<G:21><EOL>
 :T:<G:30><EOL>
 :T:<BLANK><EOL>
@@ -495,7 +501,13 @@
 * Work offset: operation's work coord (54-59) if set, else G54. It came back 0 in the 15:40 post; <W_COORD> resolves to 1 and prints nothing.
 :SECTION=RAPID_FROM_TOOL_CHANGE_MILL
 :T:<N><S!><M:SPINDLE_DIR><M:COOLANT_TYPE><EOL>
-:T:IF work_coord>53 THEN G<%:work_coord><EOL>ENDIF
+* G59.1-G59.3 = work coord 59 + sub work coord 1-3; PathPilot has no G54.1 Pn
+:T:IF work_coord>53 AND work_coord<59 THEN G<%:work_coord><EOL>ENDIF
+:T:IF work_coord=59 AND sub_work_coord=1 THEN G59.1<EOL>ENDIF
+:T:IF work_coord=59 AND sub_work_coord=2 THEN G59.2<EOL>ENDIF
+:T:IF work_coord=59 AND sub_work_coord=3 THEN G59.3<EOL>ENDIF
+:T:IF work_coord=59 AND sub_work_coord>3 THEN M0 (Error! G59 sub work coord above 3 not supported)<EOL>ENDIF
+:T:IF work_coord>59 THEN M0 (Error! Work coord above 59 not supported)<EOL>ENDIF
 :T:IF work_coord<54 THEN <G!:54><EOL>ENDIF
 :T:<N><G!:00><G:90><X!><Y!><EOL>
 :T:<N><Z!:OPR_Z_RAPID_PLANE><EOL>
