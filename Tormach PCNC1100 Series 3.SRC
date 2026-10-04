@@ -351,34 +351,6 @@
 :OPERLIST=coolant
 :OPEREND
 *-----------------------------------
-:OPERID=MILL_UV_CUT
-:OPERLIST=abs inc
-:OPERLIST=work coord
-:OPERLIST=coolant
-:OPERLIST=auto angle pair
-:OPERLIST=other angle pair
-:OPERLIST=angle change limit
-:OPERLIST=interpolation angle step
-:OPERLIST=using int distance
-:OPERLIST=interpolation distance
-:OPERLIST=tool retract distance
-:OPERLIST=pole angle tolerance
-:OPERLIST=auto pole angle
-:OPERLIST=pole handling
-:OPERLIST=interpolation type
-:OPERLIST=retract and rewind
-:OPERLIST=rewind angle
-:OPERLIST=multiaxis best solution
-:OPERLIST=multiaxis rotary angle
-:OPERLIST=use machine limits
-:OPERLIST=auto angle pair
-:OPERLIST=other angle pair
-:OPERLIST=angle change limit
-:OPERLIST=interpolation angle step
-:OPERLIST=using int distance
-:OPERLIST=interpolation distance
-:OPEREND
-*-----------------------------------
 :OPERID=MILL_SLICE_CUT
 :OPERLIST=abs inc
 :OPERLIST=work coord

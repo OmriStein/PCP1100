@@ -19,25 +19,25 @@ Facing, pocket roughing and finishing, contour (absolute and incremental), lace,
 | 5 | Topo cut | 3D finishing over a surface. |
 | 6 | Freeform cut | 3D finishing over freeform surfaces. |
 | 7 | Pencil cut | Cleans up corners and fillets left by earlier cuts. |
-| 8 | UV cut | Multiaxis, which a 3-axis PathPilot can't run. Decide whether to delete it. |
 
 ### Global features
 
 | # | Feature | What it is |
 |---|---|---|
-| 9 | Work offsets G56-G59, G59.1-G59.3 | Check each code posts, plus one program with two setups on different offsets. |
-| 10 | Coolant types | Mist, through-tool and off, not just flood. |
-| 11 | G37 on later tool changes | Tool length probe after the second and later M6, Yes and No. |
-| 12 | Post Program Stop | Tape output option, on and off. |
-| 13 | M1 and M2/M30 | Optional stop and program end. |
-| 14 | Safety block | Program with no coolant and no tool offset. |
-| 15 | Arcs | G2/G3 on XZ and YZ planes, helical arcs, full 360 circles. |
-| 16 | Feed type | G95 feed per revolution or inverse time. Only if you plan to use them. |
-| 17 | Incremental on milling | Profiling, pocket and 3D operations. Contour already passed. |
+| 8 | Work offsets G56-G59, G59.1-G59.3 | Check each code posts, plus one program with two setups on different offsets. |
+| 9 | Coolant types | Mist, through-tool and off, not just flood. |
+| 10 | G37 on later tool changes | Tool length probe after the second and later M6, Yes and No. |
+| 11 | Post Program Stop | Tape output option, on and off. |
+| 12 | M1 and M2/M30 | Optional stop and program end. |
+| 13 | Safety block | Program with no coolant and no tool offset. |
+| 14 | Arcs | G2/G3 on XZ and YZ planes, helical arcs, full 360 circles. |
+| 15 | Feed type | G95 feed per revolution or inverse time. Only if you plan to use them. |
+| 16 | Incremental on milling | Profiling, pocket and 3D operations. Contour already passed. |
 
 ## Not tested, and why
 
 - **Misc milling:** no CAMWorks operation posted as `MILL_MISC`, and the post treats it like a pocket.
 - **Display tool offset (profiling):** display setting in CAMWorks only, no effect on G-code.
+- **UV cut:** multiaxis, removed from the post, PathPilot 3-axis can't run it.
 - **Reverse tapping:** removed, PathPilot doesn't support it.
 - **Incremental on drilling:** option hidden, drilling is always absolute.
