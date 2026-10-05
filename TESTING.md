@@ -4,7 +4,7 @@ Post one small part per item and compare the G-code with the OG post.
 
 ## Verified
 
-Facing, pocket roughing and finishing, contour (absolute and incremental), lace, profiling, countersink, thread milling, G37 Yes/No, G54-G59 and G59.1-G59.3 work offsets, coolant types, M1 optional stop, M30 program end, safety block, XY arcs (G2/G3) and helical arcs, all drilling operations (G81, G82, G83, G73, G84, G85, G89, back boring warning, fine boring, counterbore, hole patterns, G98).
+Facing, pocket roughing and finishing, contour (absolute and incremental), lace, profiling, countersink, thread milling, G37 Yes/No, G54-G59 and G59.1-G59.3 work offsets, coolant types, program stop and optional stop (with and without a tool change after), M30 program end, safety block, XY arcs (G2/G3) and helical arcs, all drilling operations (G81, G82, G83, G73, G84, G85, G89, back boring warning, fine boring, counterbore, hole patterns, G98).
 
 ## Still to test
 
@@ -24,10 +24,9 @@ Facing, pocket roughing and finishing, contour (absolute and incremental), lace,
 
 | # | Feature | What it is |
 |---|---|---|
-| 8 | Post Program Stop | Tape output option, on and off. |
-| 9 | Arcs in XZ and YZ planes | Post only outputs I and J with no G18/G19, so these would post wrong. Needs a decision, only matters for 3D operations. |
-| 10 | Feed type | G95 feed per revolution or inverse time. Only if you plan to use them. |
-| 11 | Incremental on milling | Profiling, pocket and 3D operations. Contour already passed. |
+| 8 | Arcs in XZ and YZ planes | Post only outputs I and J with no G18/G19, so these would post wrong. Needs a decision, only matters for 3D operations. |
+| 9 | Feed type | G95 feed per revolution or inverse time. Only if you plan to use them. |
+| 10 | Incremental on milling | Profiling, pocket and 3D operations. Contour already passed. |
 
 ## Not tested, and why
 
