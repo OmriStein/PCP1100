@@ -31,7 +31,7 @@ Facing, pocket roughing and finishing, contour (absolute and incremental), lace,
 ## Not tested, and why
 
 - **Misc milling:** no CAMWorks operation posted as `MILL_MISC`, and the post treats it like a pocket.
-- **Display tool offset (profiling):** display setting in CAMWorks only, no effect on G-code.
+- **Display tool offset (profiling):** option removed, it had no effect on the G-code.
 - **UV cut:** multiaxis, removed from the post, PathPilot 3-axis can't run it.
 - **Reverse tapping:** removed, PathPilot doesn't support it.
 - **Incremental on drilling:** option hidden, drilling is always absolute.

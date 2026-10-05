@@ -339,7 +339,6 @@
 *-----------------------------------
 :OPERID=MILL_PROFILING
 :OPERLIST=machine compensation
-:OPERLIST=display tool offset
 :OPERLIST=abs inc
 :OPERLIST=work coord
 :OPERLIST=coolant
