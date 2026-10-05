@@ -51,3 +51,5 @@ These are source files. They must be compiled before CAMWorks can use them.
 `PostName = Tormach PCNC1100 Series 3
 PostExtension = nc
 `
+
+A compiled post (`.ctl`, `.kin`, `.lng`) is available in the `post` folder.
