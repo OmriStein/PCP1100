@@ -4,7 +4,7 @@ Post one small part per item and compare the G-code with the OG post.
 
 ## Verified
 
-Facing, pocket roughing and finishing, contour (absolute and incremental), lace, profiling, countersink, thread milling, G37 Yes/No, G54-G59 and G59.1-G59.3 work offsets, coolant types, program stop and optional stop (with and without a tool change after), M30 program end, safety block, XY arcs (G2/G3) and helical arcs, all drilling operations (G81, G82, G83, G73, G84, G85, G89, back boring warning, fine boring, counterbore, hole patterns, G98).
+Facing, pocket roughing and finishing, contour (absolute and incremental), lace, profiling, countersink, thread milling, G37 Yes/No, G54-G59 and G59.1-G59.3 work offsets, coolant types, program stop and optional stop (with and without a tool change after, operation comment on the stop line), M30 program end, safety block, XY arcs (G2/G3) and helical arcs, all drilling operations (G81, G82, G83, G73, G84, G85, G89, back boring warning, fine boring, counterbore, hole patterns, G98).
 
 ## Still to test
 
