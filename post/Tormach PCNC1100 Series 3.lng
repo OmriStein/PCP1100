@@ -1,0 +1,87 @@
+DRILLING                                                              :0001:
+SPOT_DRILLING                                                         :0002:
+PECKING                                                               :0003:
+TAPPING                                                               :0004:
+BORING                                                                :0005:
+HIGH_SPEED_PECKING                                                    :0006:
+VARIABLE_PECKING                                                      :0007:
+REAMING                                                               :0008:
+REAMING_DWELL                                                         :0009:
+BORE_DWELL                                                            :0010:
+BACK_BORING                                                           :0011:
+FINE_BORING                                                           :0012:
+MILL_LACE                                                             :0013:
+MILL_POCKET                                                           :0014:
+MILL_PROFILING                                                        :0015:
+MILL_MISC                                                             :0016:
+MILL_SLICE_CUT                                                        :0017:
+MILL_ROUGH_CUT                                                        :0018:
+MILL_CURVE_CUT                                                        :0019:
+MILL_TOPO_CUT                                                         :0020:
+MILL_FREEFORM_CUT                                                     :0021:
+MILL_PENCIL_CUT                                                       :0022:
+Post Program Stop                                                     :0023:
+Measure Tool Length                                                   :0024:
+SELECT Measure Tool Length                                            :0025:
+No                                                                    :0026:
+Yes                                                                   :0027:
+Machine Name                                                          :0028:
+                                                                      :0029:
+Controller Type                                                       :0030:
+                                                                      :0031:
+Z Home                                                                :0032:
+                                                                      :0033:
+Traverse Rate                                                         :0034:
+                                                                      :0035:
+Part Thickness                                                        :0036:
+ENTER Part Thickness                                                  :0037:
+Work Coordinate 54 - 59                                               :0038:
+ENTER Work Coordinate 54 - 59                                         :0039:
+Coolant                                                               :0040:
+SELECT Coolant                                                        :0041:
+Off                                                                   :0042:
+Flood                                                                 :0043:
+Mist                                                                  :0044:
+Through Hole                                                          :0045:
+Dwell                                                                 :0046:
+ENTER Dwell                                                           :0047:
+Absolute Incremental                                                  :0048:
+SELECT Absolute Incremental                                           :0049:
+Absolute                                                              :0050:
+Incremental                                                           :0051:
+Compensation                                                          :0052:
+SELECT Compensation                                                   :0053:
+On                                                                    :0054:
+Off                                                                   :0055:
+Left                                                                  :0056:
+Right                                                                 :0057:
+Program/Optional Stop                                                 :0058:
+SELECT Program/Optional Stop                                          :0059:
+Program Stop                                                          :0060:
+Optional Stop                                                         :0061:
+Sub Work Coordinate 1 - 1                                             :0062:
+ENTER Sub Work Coordinate 1 - 100                                     :0063:
+Program number                                                        :0064:
+ENTER Program number                                                  :0065:
+5axis Arc Deviation                                                   :0066:
+ENTER 5axis Arc Deviation                                             :0067:
+Fixture Offset                                                        :0068:
+ENTER Fixture Offset                                                  :0069:
+Shift Amount                                                          :0070:
+ENTER Shift Amount                                                    :0071:
+Tool Holder Length                                                    :0072:
+ENTER Tool Holder Length                                              :0073:
+Sign Angle A                                                          :0074:
+SELECT Sign Angle A                                                   :0075:
+A+                                                                    :0076:
+A-                                                                    :0077:
+Rigid Tap On or Off                                                   :0078:
+SELECT Rigid Tap On or Off                                            :0079:
+On                                                                    :0080:
+Off                                                                   :0081:
+(                                                                     :0082:
+)                                                                     :0083:
+(STOCK|-|                                                             :0084:
+)                                                                     :0085:
+|(|THICKNESS=                                                         :0086:
+|)                                                                    :0087:
