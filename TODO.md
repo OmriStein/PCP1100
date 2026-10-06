@@ -4,4 +4,3 @@
 2. Add a post operation that inserts G-code.
 3. Add a .CNF file that overrides the post processor settings.
 4. Add probing.
-5. Add tool desciption to .set file
