@@ -1,0 +1,15 @@
+*--------------------------------------------------------------------------
+* Tormach PCNC1100 Series 3 Mill with 4-axis "A" indexer
+* The settings in this file will override the settings of the post processor
+* Lines started with an asterisk (*) are comments and are ignored
+* This file will only affect the post processor ( .CTL file) with the same
+* name
+*
+*--------------------------------------------------------------------------
+:NO_SET_FILE=TRUE
+                * If "NO_SET_FILE" is set to "FALSE" then the post
+                * will output the .set file.
+                *
+                * If "NO_SET_FILE" is set to "TRUE" then the post
+                * will not output the .set file.
+*--------------------------------------------------------------------------
