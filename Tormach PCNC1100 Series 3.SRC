@@ -404,7 +404,7 @@
 *
 :SECTION=START_OF_TAPE_TAIL
 :T:<BLANK><EOL>
-:T:IF work_coord>53 AND work_coord<59 THEN <G:17><G!:40><G:49> G50 <G:work_coord><G:64><G!:80><G:90> G91.1<G!:94><EOL>ENDIF
+:T:IF work_coord>53 AND work_coord<59 THEN <G:17><G!:40><G:49> G50<G:work_coord><G:64><G!:80><G:90> G91.1<G!:94><EOL>ENDIF
 :T:IF work_coord<54 THEN <G:17><G!:40><G:49> G50 G54<G:64><G!:80><G:90> G91.1<G!:94><EOL>ENDIF
 :T:IF work_coord>59 THEN <G:17><G!:40><G:49> G50 G54<G:64><G!:80><G:90> G91.1<G!:94><EOL>ENDIF
 :T:IF work_coord=59 AND sub_work_coord=1 THEN <G:17><G!:40><G:49> G50 G59.1<G:64><G!:80><G:90> G91.1<G!:94><EOL>ENDIF

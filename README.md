@@ -40,6 +40,7 @@ Each item was posted from a test part and checked against the G-code.
 
 - **UV cut** and other multiaxis operations: PathPilot 3-axis can't run them.
 - **Reverse tapping:** PathPilot doesn't support it.
+- **Tormach Smart-Coolant:** the post only outputs M7, M8 and M9.
 
 ## Use
 
