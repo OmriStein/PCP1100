@@ -71,7 +71,7 @@ This document contains the comprehensive list of G-codes supported by the Tormac
 * ~~**G73**: High-speed peck drilling cycle (breaks chips without fully retracting out of the hole).~~
 * ~~**G80**: Cancel active canned cycle motion.~~
 * ~~**G81**: Standard drilling cycle.~~
-* ~~**G82**: Drilling cycle with a programmed dwell at the bottom of the hole.
+* ~~**G82**: Drilling cycle with a programmed dwell at the bottom of the hole.~~
 * ~~**G83**: Deep hole peck drilling cycle (fully retracts to clear chips).~~
 * ~~**G84**: Standard right-hand tapping cycle.~~
 * ~~**G85**: Boring cycle (feeds down, feeds back up out of the hole).~~

@@ -404,13 +404,13 @@
 *
 :SECTION=START_OF_TAPE_TAIL
 :T:<BLANK><EOL>
-:T:IF work_coord>53 AND work_coord<59 THEN <G:17><G!:40><G:49> G50<G:work_coord><G:64><G!:80><G:90> G91.1<G!:94><EOL>ENDIF
-:T:IF work_coord<54 THEN <G:17><G!:40><G:49> G50 G54<G:64><G!:80><G:90> G91.1<G!:94><EOL>ENDIF
-:T:IF work_coord>59 THEN <G:17><G!:40><G:49> G50 G54<G:64><G!:80><G:90> G91.1<G!:94><EOL>ENDIF
-:T:IF work_coord=59 AND sub_work_coord=1 THEN <G:17><G!:40><G:49> G50 G59.1<G:64><G!:80><G:90> G91.1<G!:94><EOL>ENDIF
-:T:IF work_coord=59 AND sub_work_coord=2 THEN <G:17><G!:40><G:49> G50 G59.2<G:64><G!:80><G:90> G91.1<G!:94><EOL>ENDIF
-:T:IF work_coord=59 AND sub_work_coord=3 THEN <G:17><G!:40><G:49> G50 G59.3<G:64><G!:80><G:90> G91.1<G!:94><EOL>ENDIF
-:T:IF work_coord=59 AND sub_work_coord>3 THEN <G:17><G!:40><G:49> G50 G59<G:64><G!:80><G:90> G91.1<G!:94><EOL>ENDIF
+:T:IF work_coord>53 AND work_coord<59 THEN <G:17><G!:40><G:49><G!:GC(G_ROTATE_OFF)><G:work_coord><G:64><G!:80><G:90> G91.1<G!:94><EOL>ENDIF
+:T:IF work_coord<54 THEN <G:17><G!:40><G:49><G!:GC(G_ROTATE_OFF)> G54<G:64><G!:80><G:90> G91.1<G!:94><EOL>ENDIF
+:T:IF work_coord>59 THEN <G:17><G!:40><G:49><G!:GC(G_ROTATE_OFF)> G54<G:64><G!:80><G:90> G91.1<G!:94><EOL>ENDIF
+:T:IF work_coord=59 AND sub_work_coord=1 THEN <G:17><G!:40><G:49><G!:GC(G_ROTATE_OFF)> G59.1<G:64><G!:80><G:90> G91.1<G!:94><EOL>ENDIF
+:T:IF work_coord=59 AND sub_work_coord=2 THEN <G:17><G!:40><G:49><G!:GC(G_ROTATE_OFF)> G59.2<G:64><G!:80><G:90> G91.1<G!:94><EOL>ENDIF
+:T:IF work_coord=59 AND sub_work_coord=3 THEN <G:17><G!:40><G:49><G!:GC(G_ROTATE_OFF)> G59.3<G:64><G!:80><G:90> G91.1<G!:94><EOL>ENDIF
+:T:IF work_coord=59 AND sub_work_coord>3 THEN <G:17><G!:40><G:49><G!:GC(G_ROTATE_OFF)> G59<G:64><G!:80><G:90> G91.1<G!:94><EOL>ENDIF
 :T:<G:ENGMET><EOL>
 :T:<G:30><EOL>
 :T:<BLANK><EOL>
@@ -954,25 +954,28 @@ DIUS=9999
 :C: GC(G_YZ_PLANE)     = 19  GG(G_YZ_PLANE)     =  2  GM(G_YZ_PLANE)     = YES
 :C: GC(G_ENGLISH)      = 20  GG(G_ENGLISH)      =  2  GM(G_ENGLISH)      = YES
 :C: GC(G_METRIC)       = 21  GG(G_METRIC)       =  2  GM(G_METRIC)       = YES
-:C: GC(G_HOME)         = 30 GG(G_HOME)         =  0  GM(G_HOME)         = NO
+:C: GC(G_HOME)         = 30  GG(G_HOME)         =  0  GM(G_HOME)         = NO
 :C: GC(G_ETS)          = 37  GG(G_ETS)          =  0  GM(G_ETS)          = NO
 :C: GC(G_COMP_OFF)     = 40  GG(G_COMP_OFF)     =  7  GM(G_COMP_OFF)     = YES
 :C: GC(G_COMP_LEFT)    = 41  GG(G_COMP_LEFT)    =  7  GM(G_COMP_LEFT)    = YES
 :C: GC(G_COMP_RIGHT)   = 42  GG(G_COMP_RIGHT)   =  7  GM(G_COMP_RIGHT)   = YES
 :C: GC(G_LEN_COMP)     = 43  GG(G_LEN_COMP)     =  8  GM(G_LEN_COMP)     = NO
 :C: GC(G_LEN_CANCEL)   = 49  GG(G_LEN_CANCEL)   =  8  GM(G_LEN_CANCEL)   = NO
+:C: GC(G_ROTATE_OFF)   = 50  GG(G_ROTATE_OFF)   = 16  GM(G_ROTATE_OFF)   = YES
 :C: GC(G_WORK_1)       = 54  GG(G_WORK_1)       = 12  GM(G_WORK_1)       = YES
 :C: GC(G_WORK_2)       = 55  GG(G_WORK_2)       = 12  GM(G_WORK_2)       = YES
 :C: GC(G_WORK_3)       = 56  GG(G_WORK_3)       = 12  GM(G_WORK_3)       = YES
 :C: GC(G_WORK_4)       = 57  GG(G_WORK_4)       = 12  GM(G_WORK_4)       = YES
 :C: GC(G_WORK_5)       = 58  GG(G_WORK_5)       = 12  GM(G_WORK_5)       = YES
 :C: GC(G_WORK_6)       = 59  GG(G_WORK_6)       = 12  GM(G_WORK_6)       = YES
-:C: GC(G_VARIABLE_PECK)= 83  GG(G_VARIABLE_PECK)=  9  GM(G_VARIABLE_PECK)= YES
+:C: GC(G_EXACT_PATH)   = 61  GG(G_EXACT_PATH)   = 13  GM(G_EXACT_PATH)   = YES
+:C: GC(G_BLEND_PATH)   = 64  GG(G_BLEND_PATH)   = 13  GM(G_BLEND_PATH)   = YES
 :C: GC(G_HIGH_PECK)    = 73  GG(G_HIGH_PECK)    =  9  GM(G_HIGH_PECK)    = YES
 :C: GC(G_CANCEL_CYC)   = 80  GG(G_CANCEL_CYC)   =  9  GM(G_CANCEL_CYC)   = YES
 :C: GC(G_DRILL)        = 81  GG(G_DRILL)        =  9  GM(G_DRILL)        = YES
 :C: GC(G_SPOT_DRILL)   = 82  GG(G_SPOT_DRILL)   =  9  GM(G_SPOT_DRILL)   = YES
 :C: GC(G_PECK)         = 83  GG(G_PECK)         =  9  GM(G_PECK)         = YES
+:C: GC(G_VARIABLE_PECK)= 83  GG(G_VARIABLE_PECK)=  9  GM(G_VARIABLE_PECK)= YES
 :C: GC(G_TAP)          = 84  GG(G_TAP)          =  9  GM(G_TAP)          = YES
 :C: GC(G_REAM)         = 85  GG(G_REAM)         =  9  GM(G_REAM)         = YES
 :C: GC(G_BORE)         = 86  GG(G_BORE)         =  9  GM(G_BORE)         = YES
@@ -981,11 +984,10 @@ DIUS=9999
 :C: GC(G_ABS)          = 90  GG(G_ABS)          =  3  GM(G_ABS)          = YES
 :C: GC(G_INC)          = 91  GG(G_INC)          =  3  GM(G_INC)          = YES
 :C: GC(G_PRESET)       = 92  GG(G_PRESET)       =  0  GM(G_PRESET)       = NO
+:C: GC(G_REVERSE_FR)   = 93  GG(G_REVERSE_FR)   =  4  GM(G_REVERSE_FR)   = YES
+:C: GC(G_FPM)          = 94  GG(G_FPM)          =  4  GM(G_FPM)          = YES
 :C: GC(G_INIT_PLANE)   = 98  GG(G_INIT_PLANE)   =  0  GM(G_INIT_PLANE)   = NO
 :C: GC(G_R_PLANE)      = 99  GG(G_R_PLANE)      =  0  GM(G_R_PLANE)      = NO
-:C: GC(G_FPM)          = 94  GG(G_FPM)          =  4  GM(G_FPM)          = YES
-:C: GC(G_REVERSE_FR)   = 93  GG(G_REVERSE_FR)   =  4  GM(G_REVERSE_FR)   = YES
-:C: GC(G_CONT_ON)      = 64  GG(G_CONT_ON)      = 13  GM(G_CONT_ON)      = YES
 
 *
 *-----------------------------------
