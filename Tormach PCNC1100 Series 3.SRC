@@ -404,14 +404,14 @@
 *
 :SECTION=START_OF_TAPE_TAIL
 :T:<BLANK><EOL>
-:T:IF work_coord>53 AND work_coord<59 THEN <G:17><G!:40><G:49> G50 G<%:work_coord><G:64><G!:80><G:90> G91.1<G!:94><EOL>ENDIF
+:T:IF work_coord>53 AND work_coord<59 THEN <G:17><G!:40><G:49> G50 <G:work_coord><G:64><G!:80><G:90> G91.1<G!:94><EOL>ENDIF
 :T:IF work_coord<54 THEN <G:17><G!:40><G:49> G50 G54<G:64><G!:80><G:90> G91.1<G!:94><EOL>ENDIF
 :T:IF work_coord>59 THEN <G:17><G!:40><G:49> G50 G54<G:64><G!:80><G:90> G91.1<G!:94><EOL>ENDIF
 :T:IF work_coord=59 AND sub_work_coord=1 THEN <G:17><G!:40><G:49> G50 G59.1<G:64><G!:80><G:90> G91.1<G!:94><EOL>ENDIF
 :T:IF work_coord=59 AND sub_work_coord=2 THEN <G:17><G!:40><G:49> G50 G59.2<G:64><G!:80><G:90> G91.1<G!:94><EOL>ENDIF
 :T:IF work_coord=59 AND sub_work_coord=3 THEN <G:17><G!:40><G:49> G50 G59.3<G:64><G!:80><G:90> G91.1<G!:94><EOL>ENDIF
 :T:IF work_coord=59 AND sub_work_coord>3 THEN <G:17><G!:40><G:49> G50 G59<G:64><G!:80><G:90> G91.1<G!:94><EOL>ENDIF
-:T:<G:21><EOL>
+:T:<G:ENGMET><EOL>
 :T:<G:30><EOL>
 :T:<BLANK><EOL>
 *
@@ -477,24 +477,24 @@
 *:SECTION=SUB_PRELOAD_TOOL_CHANGE_MILL
 *
 :SECTION=FIRST_RAPID_Z_MOVE_DOWN_MILL
-:T:<N><G:90><G:00><Z><EOL>
+:T:<N><G:ABSINC><G:00><Z><EOL>
 *
 *:SECTION=FIRST_RAPID_Z_PRELOAD_DOWN_MILL
 *
 *:SECTION=FIVE_AXIS_FIRST_RAPID_Z_DOWN
 *
 :SECTION=RAPID_Z_MOVE_DOWN_MILL
-:T:<N><G:90><G:00><Z><EOL>
+:T:<N><G:ABSINC><G:00><Z><EOL>
 *
 *:SECTION=FIVE_AXIS_RAPID_Z_MOVE_DOWN
 *
 :SECTION=RAPID_Z_MOVE_UP_MILL
-:T:<N><G:90><G:00><Z><EOL>
+:T:<N><G:ABSINC><G:00><Z><EOL>
 *
 *:SECTION=FIVE_AXIS_RAPID_Z_MOVE_UP
 *
 :SECTION=LAST_RAPID_Z_MOVE_UP_MILL
-:T:<N><G:90><G:00><Z><EOL>
+:T:<N><G:ABSINC><G:00><Z><EOL>
 *
 *:SECTION=FIVE_AXIS_LAST_RAPID_Z_MOVE_UP
 *
@@ -502,26 +502,26 @@
 :SECTION=RAPID_FROM_TOOL_CHANGE_MILL
 :T:<N><S!><M:SPINDLE_DIR><M:COOLANT_TYPE><EOL>
 * G59.1-G59.3 = work coord 59 + sub work coord 1-3; PathPilot has no G54.1 Pn
-:T:IF work_coord>53 AND work_coord<59 THEN G<%:work_coord><EOL>ENDIF
+:T:IF work_coord>53 AND work_coord<59 THEN <G!:work_coord><EOL>ENDIF
 :T:IF work_coord=59 AND sub_work_coord=1 THEN G59.1<EOL>ENDIF
 :T:IF work_coord=59 AND sub_work_coord=2 THEN G59.2<EOL>ENDIF
 :T:IF work_coord=59 AND sub_work_coord=3 THEN G59.3<EOL>ENDIF
 :T:IF work_coord=59 AND sub_work_coord>3 THEN M0 (Error! G59 sub work coord above 3 not supported)<EOL>ENDIF
 :T:IF work_coord>59 THEN M0 (Error! Work coord above 59 not supported)<EOL>ENDIF
 :T:IF work_coord<54 THEN <G!:54><EOL>ENDIF
-:T:<N><G!:00><G:90><X!><Y!><EOL>
+:T:<N><G!:00><G:ABSINC><X!><Y!><EOL>
 :T:<N><Z!:OPR_Z_RAPID_PLANE><EOL>
 *
 :SECTION=RAPID_LEADIN_FROM_TOOL_CHANGE_MILL
 :T:<N><S><M:SPINDLE_DIR><M:COOLANT_TYPE><EOL>
 :T:<N><W_COORD!><EOL>
-:T:<N><G:COMP><COMP_NUMBER><G!:00><G!:90><X!><Y!><EOL>
+:T:<N><G:COMP><COMP_NUMBER><G!:00><G!:ABSINC><X!><Y!><EOL>
 *
 :SECTION=FIVE_AXIS_RAPID_FROM_T_CHANGE
 :T:<N><S><M:SPINDLE_DIR><EOL>
 :T:IF USING_4TH_AXIS_LOCK=YES THEN <N><M:MC(M_LOCK_OFF)><EOL>ENDIF
 :T:IF USING_5TH_AXIS_LOCK=YES THEN <N><M:MC(M_LOCK_5OFF)><EOL>ENDIF
-:T:<N><W_COORD!><G!:00><G!:90><X!><Y!><A!><B!><EOL>
+:T:<N><W_COORD!><G!:00><G!:ABSINC><X!><Y!><A!><B!><EOL>
 :T:IF USING_4TH_AXIS_LOCK=YES THEN <N><M:MC(M_LOCK_ON)><EOL>ENDIF
 :T:IF USING_5TH_AXIS_LOCK=YES THEN <N><M:MC(M_LOCK_5ON)><EOL>ENDIF
 *
@@ -553,7 +553,7 @@
 *:SECTION=FIVE_AXIS_RAPID_TO_T_CHANGE
 *
 :SECTION=FEED_Z_MOVE_DOWN_MILL
-:T:<N><G:90><G:94><G:01><Z><F><M:COOLANT_TYPE><EOL>
+:T:<N><G:ABSINC><G:94><G:01><Z><F><M:COOLANT_TYPE><EOL>
 *
 *:SECTION=FIVE_AXIS_FEED_Z_MOVE_DOWN
 *
@@ -678,11 +678,11 @@
 *
 :SECTION=CANCEL_DRILL_CYCLE
 :T:<N><G:80><EOL>
-:T:<N><G:90><G!:00><Z!:OPR_Z_RAPID_PLANE><EOL>
+:T:<N><G:ABSINC><G!:00><Z!:OPR_Z_RAPID_PLANE><EOL>
 *
 :SECTION=END_DRILL_CYCLE
 :T:<N><G:80><EOL>
-:T:<N><G:90><G!:00><Z!:OPR_Z_RAPID_PLANE><EOL>
+:T:<N><G:ABSINC><G!:00><Z!:OPR_Z_RAPID_PLANE><EOL>
 :T:<N><M:05><M:09><EOL>
 *
 :SECTION=PROGRAM_STOP
@@ -954,7 +954,7 @@ DIUS=9999
 :C: GC(G_YZ_PLANE)     = 19  GG(G_YZ_PLANE)     =  2  GM(G_YZ_PLANE)     = YES
 :C: GC(G_ENGLISH)      = 20  GG(G_ENGLISH)      =  2  GM(G_ENGLISH)      = YES
 :C: GC(G_METRIC)       = 21  GG(G_METRIC)       =  2  GM(G_METRIC)       = YES
-:C: GC(G_HOME)         = 28  GG(G_HOME)         =  0  GM(G_HOME)         = NO
+:C: GC(G_HOME)         = 30 GG(G_HOME)         =  0  GM(G_HOME)         = NO
 :C: GC(G_ETS)          = 37  GG(G_ETS)          =  0  GM(G_ETS)          = NO
 :C: GC(G_COMP_OFF)     = 40  GG(G_COMP_OFF)     =  7  GM(G_COMP_OFF)     = YES
 :C: GC(G_COMP_LEFT)    = 41  GG(G_COMP_LEFT)    =  7  GM(G_COMP_LEFT)    = YES
